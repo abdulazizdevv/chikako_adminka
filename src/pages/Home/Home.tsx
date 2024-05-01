@@ -1,7 +1,12 @@
-import React from 'react';
+import Header from '../../layout/Header/Header';
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Header text='Home' />
+      <h1 className='text-[25px]'>Assalomu alaykum</h1>
+    </>
+  );
 };
 
 export default Home;

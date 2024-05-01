@@ -1,13 +1,9 @@
 import { MenuItem, Select, TextField } from '@mui/material';
-import Gallery from '../../../../components/Gallery/Gallery';
 import TextArea from '../../../../components/TextArea/TextArea';
-import GalleryArray from '../../../../components/GalleryArray/GalleryArray';
 
 export const Uzbek = ({ formik, categories }: any) => {
   return (
     <div className='flex items-start gap-8'>
-      {/* <Gallery formik={formik} /> */}
-      <GalleryArray formik={formik} />
       <div className='w-full flex flex-col gap-3'>
         <TextField
           id='outlined-basic'

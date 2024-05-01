@@ -1,11 +1,9 @@
 import { MenuItem, Select, TextField } from '@mui/material';
 import TextArea from '../../../../components/TextArea/TextArea';
-import GalleryArray from '../../../../components/GalleryArray/GalleryArray';
 
 export const Russian = ({ formik, categories }: any) => {
   return (
     <div className='flex items-start gap-8'>
-      <GalleryArray formik={formik} />
       <div className='w-full flex flex-col gap-3'>
         <TextField
           id='outlined-basic'

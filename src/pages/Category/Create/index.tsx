@@ -47,13 +47,13 @@ export default function CreateCategory() {
         const res = await putCategory(params.id, values);
         if (res.status === 201) {
           toast.success('Successfully Update category');
-          setTimeout(() => navigate(-1), 1000);
+          setTimeout(() => navigate(-1), 800);
         }
       } else {
         const res = await postCategory(values);
         if (res.status === 201) {
           toast.success('Successfully create category');
-          setTimeout(() => navigate(-1), 1000);
+          setTimeout(() => navigate(-1), 800);
         }
       }
     } catch (error: any) {
@@ -125,16 +125,20 @@ export default function CreateCategory() {
               </CustomTabPanel>
             </Box>
           </CardContent>
+          <Footer>
+            <Button
+              variant='outlined'
+              color='error'
+              onClick={() => navigate(-1)}
+            >
+              Cancel
+            </Button>
+            <Button type='submit' variant='outlined' color='success'>
+              Save
+            </Button>
+          </Footer>
         </form>
       </div>
-      <Footer>
-        <Button variant='outlined' color='error' onClick={() => navigate(-1)}>
-          Cancel
-        </Button>
-        <Button type='submit' variant='outlined' color='success'>
-          Save
-        </Button>
-      </Footer>
     </>
   );
 }

@@ -20,6 +20,7 @@ import {
   postProduct,
   putProduct,
 } from '../../../services/product';
+import GalleryArray from '../../../components/GalleryArray/GalleryArray';
 
 export default function CreateProduct() {
   const [value, setValue] = useState(0);
@@ -39,7 +40,7 @@ export default function CreateProduct() {
   };
 
   const initialValues: IProduct = {
-    images: [''],
+    images: [],
     name: { uz: '', ru: '', en: '', cr: '' },
     description: { uz: '', ru: '', en: '', cr: '' },
     price: '',
@@ -103,40 +104,48 @@ export default function CreateProduct() {
         }
       />
       <form onSubmit={handleSubmit}>
-        <CardContent
-          title='General information'
-          className='m-5 rounded-lg p-2 w-1/2'
-        >
-          <Box>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                TabIndicatorProps={{
-                  style: { background: '#B31312' },
-                }}
-                textColor='inherit'
-              >
-                <Tab label='Uz' {...a11yProps(0)} />
-                <Tab label='Ru' {...a11yProps(1)} />
-                <Tab label='En' {...a11yProps(2)} />
-                <Tab label='Kr' {...a11yProps(3)} />
-              </Tabs>
+        <div className='flex lg:flex-nowrap flex-wrap gap-2'>
+          <CardContent
+            title='General information'
+            className='m-5 rounded-lg p-2 w-full'
+          >
+            <Box>
+              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  TabIndicatorProps={{
+                    style: { background: '#B31312' },
+                  }}
+                  textColor='inherit'
+                >
+                  <Tab label='Uz' {...a11yProps(0)} />
+                  <Tab label='Ru' {...a11yProps(1)} />
+                  <Tab label='En' {...a11yProps(2)} />
+                  <Tab label='Kr' {...a11yProps(3)} />
+                </Tabs>
+              </Box>
+              <CustomTabPanel value={value} index={0}>
+                <Uzbek formik={formik} categories={categories} />
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={1}>
+                <Russian formik={formik} categories={categories} />
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={2}>
+                <English formik={formik} categories={categories} />
+              </CustomTabPanel>
+              <CustomTabPanel value={value} index={3}>
+                <Krill formik={formik} categories={categories} />
+              </CustomTabPanel>
             </Box>
-            <CustomTabPanel value={value} index={0}>
-              <Uzbek formik={formik} categories={categories} />
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={1}>
-              <Russian formik={formik} categories={categories} />
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={2}>
-              <English formik={formik} categories={categories} />
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={3}>
-              <Krill formik={formik} categories={categories} />
-            </CustomTabPanel>
-          </Box>
-        </CardContent>
+          </CardContent>
+          <CardContent
+            title='Upload images'
+            className='m-5 rounded-lg p-2 w-full'
+          >
+            <GalleryArray formik={formik} />
+          </CardContent>
+        </div>
         <Footer>
           <Button variant='outlined' color='error' onClick={() => navigate(-1)}>
             Cancel

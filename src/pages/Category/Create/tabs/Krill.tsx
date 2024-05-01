@@ -12,7 +12,7 @@ export const Krill = ({ formik }: any) => {
         variant='outlined'
         size='small'
         // className='w-1/2'
-        value={formik.values?.name?.kr}
+        value={formik.values?.name?.cr}
         onChange={(e) => formik.setFieldValue('name.cr', e.target.value)}
       />
     </div>

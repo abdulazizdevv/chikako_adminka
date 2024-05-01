@@ -50,28 +50,28 @@ const Category = () => {
             <img
               src={`${baseURLImg}/${record?.image?.uz}`}
               alt='brand logo'
-              className='w-full h-[70px]'
+              className='w-full h-[80px] object-contain'
             />
           </div>
           <div className='border-dashed border-[#ea8787] border-[1px] rounded-md w-full p-1'>
             <img
               src={`${baseURLImg}/${record?.image?.ru}`}
               alt='brand logo'
-              className='w-full h-[70px]'
+              className='w-full h-[80px] object-contain'
             />
           </div>
           <div className='border-dashed border-[#ea8787] border-[1px] rounded-md w-full p-1'>
             <img
               src={`${baseURLImg}/${record?.image?.en}`}
               alt='brand logo'
-              className='w-full h-[70px]'
+              className='w-full h-[80px] object-contain'
             />
           </div>
           <div className='border-dashed border-[#ea8787] border-[1px] rounded-md w-full p-1'>
             <img
               src={`${baseURLImg}/${record?.image?.cr}`}
               alt='brand logo'
-              className='w-full h-[70px]'
+              className='w-full h-[80px] object-contain'
             />
           </div>
         </div>

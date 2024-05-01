@@ -17,6 +17,7 @@ import { Delete, Edit } from '@mui/icons-material';
 import dayjs from 'dayjs';
 import { ToastContainer, toast } from 'react-toastify';
 import { deleteOneProduct, getAllProduct } from '../../services/product';
+import { ICategory } from '../../types/data';
 
 const Product = () => {
   const navigate = useNavigate();
