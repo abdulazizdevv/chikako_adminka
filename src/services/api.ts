@@ -1,7 +1,7 @@
 import axios from 'axios';
 // const token = localStorage.getItem("token");
-export const baseURL = `http://localhost:6690/api`;
-export const baseURLImg = `http://localhost:6690/uploads`;
+export const baseURL = `https://single.uz/api`;
+export const baseURLImg = `https://single.uz/uploads`;
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
