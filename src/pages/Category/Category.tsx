@@ -17,6 +17,7 @@ import ActionMenu from '../../components/ActionMenu/ActionMenu';
 import { Delete, Edit } from '@mui/icons-material';
 import dayjs from 'dayjs';
 import { ToastContainer, toast } from 'react-toastify';
+import { ICategory } from '../../types/data';
 
 const Category = () => {
   const navigate = useNavigate();

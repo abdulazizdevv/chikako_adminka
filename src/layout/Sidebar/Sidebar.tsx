@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import { LuLayoutDashboard } from 'react-icons/lu';
-import { CiCircleList } from 'react-icons/ci';
 import { IoExitOutline, IoList } from 'react-icons/io5';
 import logo from '../../assets/icons/logo.svg';
 import { FaRegImages } from 'react-icons/fa';

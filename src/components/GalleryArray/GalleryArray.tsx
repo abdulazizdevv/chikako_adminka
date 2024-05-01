@@ -4,7 +4,7 @@ import { baseURLImg } from '../../services/api';
 import { ToastContainer, toast } from 'react-toastify';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 
-const GalleryArray = ({ formik, ...res }: any) => {
+const GalleryArray = ({ formik }: any) => {
   const handleChangeFile = async (e: any) => {
     try {
       const file = e?.target?.files[0];

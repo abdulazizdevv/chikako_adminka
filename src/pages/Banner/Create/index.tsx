@@ -2,25 +2,19 @@ import { Box } from '@mui/material';
 import { Tabs, Tab, Typography, Button } from '@mui/material';
 import { Link as LinkMui, useNavigate, useParams } from 'react-router-dom';
 import { useFormik } from 'formik';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 import Header from '../../../layout/Header/Header';
 import { ArrowBack } from '@mui/icons-material';
 import CardContent from '../../../components/Card/Card';
 import Footer from '../../../components/Footer/Footer';
-import {
-  getOneCategory,
-  postCategory,
-  putCategory,
-} from '../../../services/category';
-import { Russian } from './tabs/Russian';
+import CustomTabPanel from '../../../components/CustomTab/CustomTab';
+import { postBanner, putBanner } from '../../../services/banner';
+import { IBannerValue } from '../../../types/initialValues';
 import { Uzbek } from './tabs/Uzbek';
+import { Russian } from './tabs/Russian';
 import { English } from './tabs/English';
 import { Krill } from './tabs/Krill';
-import CustomTabPanel from '../../../components/CustomTab/CustomTab';
-import { getOneBanner, postBanner, putBanner } from '../../../services/banner';
-import { IBanner } from '../../../types/data';
-import { IBannerValue } from '../../../types/initialValues';
 
 export default function CreateBanner() {
   const [value, setValue] = useState(0);

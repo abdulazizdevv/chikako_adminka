@@ -3,7 +3,7 @@ import { uploadFile } from '../../services/upload';
 import { baseURLImg } from '../../services/api';
 import { ToastContainer, toast } from 'react-toastify';
 
-const Gallery = ({ formik, ...res }: any) => {
+const Gallery = ({ formik }: any) => {
   const handleChangeFile = async (e: any) => {
     try {
       const file = e?.target?.files[0];
