@@ -154,8 +154,8 @@ const Category = () => {
                     <TableCell
                       key={col.key}
                       width={col.width}
-
-                      // className='flex justify-center items-center text-center'
+                      onClick={() => navigate(`/category/${category._id}`)}
+                      className='cursor-pointer'
                     >
                       {col.render ? col.render(category, index) : '----'}
                     </TableCell>

@@ -53,7 +53,7 @@ const Product = () => {
         <img
           src={`${baseURLImg}/${record?.images[0]}`}
           alt='brand logo'
-          className='w-[100px] h-[70px]'
+          className='w-[100px] h-[100px]'
         />
       ),
     },
@@ -161,8 +161,8 @@ const Product = () => {
                     <TableCell
                       key={col.key}
                       width={col.width}
-
-                      // className='flex justify-center items-center text-center'
+                      onClick={() => navigate(`/product/${category._id}`)}
+                      className='cursor-pointer'
                     >
                       {col.render ? col.render(category, index) : '----'}
                     </TableCell>
